@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    padding-top: 81px;
+}
+
+.contenedor-cabecera {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    z-index: 1;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: 0px 3px 2px #ccc;
+}
+
+.logo {
+    font-family: "Whisper", cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: rgb(235, 0, 0);
+}
+
+.logo:hover {
+    background: #ddd;
+}
+
+.logo-2 {
+    display: none;
+    font-family: "Whisper", cursive;
+    font-size: 30px;
+    margin: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgb(235, 0, 0);
+    padding: 5px 15px;
+    border-radius: 100%;
+}
+
+.logo-2:hover {
+    background: #ddd;
+}
+
+.contenedor-cabecera-botones-primarios button{
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contenedor-cabecera-botones-primarios button:hover {
+    background: #ddd;
+}
+
+#boton-inicio {
+    color: #fff;
+    background: #000;
+}
+
+.contenedor-barra-busqueda {
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+.barra-busqueda {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    background: #eeeeee;
+    font-size: 15px;
+}
+
+.barra-busqueda:focus {
+    outline: 4px solid rgb(47, 189, 255);
+}
+
+.barra-busqueda:hover {
+    background: #ddd;
+}
+
+.contenedor-cabecera-botones-secundarios {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-cabecera-botones-secundarios span {
+    border: none;
+    background: none;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: #636363;
+}
+
+.contenedor-cabecera-botones-secundarios span:hover {
+    background: #eeeeee;
+}
+
+.imagen-perfil {
+    position: relative;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.imagen-perfil:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+.contenedor-menu-lateral-publicaciones {
+    display: flex;
+} 
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    box-shadow: 3px 1px 2px 0px #ccc;
+    padding: 5px 10px;
+}
+
+.menu-lateral div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    margin-bottom: 5px;
+    border-radius: 100%;
+    color: #636363;
+    cursor: pointer;
+}
+
+.menu-lateral div:hover {
+    background: #ddd;
+}
+
+#boton-inicio-menu-lateral {
+    background: #000;
+    color: #ffffff;
+}
+
+#texto-inicio {
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    margin-top: 2px;
+    color: #161616;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;;
+}
+
+.publicaciones {
+    columns: 225px 5;
+    column-gap: 10px;
+    padding: 5px 70px;
+}
+
+.publicacion {
+    break-inside: avoid;
+    height: fit-content;
+    margin: 0px 8px;
+    margin-bottom: 8px;
+}
+
+.contenedor-imagen {
+    position: relative;
+    cursor: zoom-in;
+}
+
+.contenedor-imagen:hover > .pantalla-configuraciones {
+    display: flex;
+}
+
+.imagen-publicacion {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.pantalla-configuraciones {
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000042;
+    border-radius: 20px;
+}
+
+.pantalla-configuracion-cabecera {
+    padding: 10px;
+}
+
+.boton-guardar {
+    background: rgb(235, 0, 0);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    background: rgb(155, 0, 0);
+}
+
+.pantalla-configuracion-footer {
+    margin-top: auto;
+    padding: 10px;
+}
+
+.pantalla-configuracion-footer span {
+    background: #fff;
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.pantalla-configuracion-footer span:hover {
+    background: #cacaca;
+}
+
+.descripcion-publicacion {
+    padding: 5px;
+}
+
+@media (max-width: 785px) {
+
+    .contenedor-cabecera-botones-primarios {
+        display: none;
+    }
+
+    .menu-lateral {
+        display: block;
+    }
+
+    .publicaciones {
+        padding-right: 0px;
+        padding-left: 82px;
+    }
+
+}   
+
+@media (max-width: 410px) {
+
+    .logo {
+
+        display: none;
+
+    }
+
+    .logo-2 {
+
+        display: block;
+
+    }
+
+}
